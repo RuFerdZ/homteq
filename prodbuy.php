@@ -43,6 +43,7 @@
 		//the value entered in the form will be posted to the basket.php to be processed
 		echo "<form action=basket.php method=post>";
 		echo "<select name='p_quantity'>";
+	
 		for($x = 1; $x<=$arrayp['prodQuantity']; $x++){
 			echo "<option value=".$x.">".$x."</option>";
 		}
@@ -51,6 +52,7 @@
 		echo "<input type=submit value='ADD TO BASKET'>";
 		//pass the product id to the next page basket.php as a hidden value
 		echo "<input type=hidden name=h_prodid value=".$prodid.">";
+		
 		echo "</form>";
 
 		echo "</td>";
