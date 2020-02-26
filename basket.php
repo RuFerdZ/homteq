@@ -12,9 +12,9 @@
 		if(isset($_POST['h_prodID'])){
 			$delprodid = $_POST['h_prodID'];
 	
-			unset($_SESSION[$delprodid]);
+			unset($_SESSION['basket'][$delprodid]);
 
-			echo "<p>1 item removed from basket</p>".$delprodid;
+			echo "<p>1 item removed from basket</p>";
 		}
 
 
