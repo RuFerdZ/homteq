@@ -8,7 +8,16 @@
 	echo "<body>";
 	include ("headfile.html"); //include header layout file
 	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
-		
+
+		if(isset($_POST['h_prodID'])){
+			$delprodid = $_POST['h_prodid'];
+	
+			unset($_SESSION[$delprodid]);
+
+			echo "<p>1 item removed from basket</p>".$delprodid;
+		}
+
+
 		if(isset($_POST['h_prodid'])){
 			$newprodid = $_POST['h_prodid'];
 			$reququantity = $_POST['p_quantity'];	
@@ -28,6 +37,7 @@
 				echo "	<th>Price</th>";
 				echo "	<th>Quantity</th>";
 				echo "	<th>Subtotal</th>";
+				echo "	<th></th>";
 				echo "  </tr>";
 				
 				foreach($_SESSION['basket'] As $prodID => $prodQuantity){
@@ -39,6 +49,8 @@
 						echo "	<td> $".$arrayp['prodPrice']."</td>";
 						echo "	<td>".$prodQuantity."</td>";
 						echo "	<td> $".$arrayp['prodPrice']*$prodQuantity."</td>";
+						echo "	<td> <form action='basket.php' method='POST'> <input type='submit' value='Remove'></td>";
+						echo "	<input type=hidden name=h_prodID value=".$prodID."> </form>";
 						$total = $total +($arrayp['prodPrice']*$prodQuantity);
 						echo "  </tr>";
 					}
@@ -58,6 +70,7 @@
 				echo "	<th>Price</th>";
 				echo "	<th>Quantity</th>";
 				echo "	<th>Subtotal</th>";
+				echo "	<th></th>";
 				echo "  </tr>";
 				
 			
