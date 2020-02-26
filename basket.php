@@ -10,7 +10,7 @@
 	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 
 		if(isset($_POST['h_prodID'])){
-			$delprodid = $_POST['h_prodid'];
+			$delprodid = $_POST['h_prodID'];
 	
 			unset($_SESSION[$delprodid]);
 
