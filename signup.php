@@ -14,7 +14,7 @@
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Address :</td><td style='border:0px !important;'> <input type='text' name='userAddress'></td></tr>";
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Postal Code :</td><td style='border:0px !important;'> <input type='text' name='userPostCode'></td></tr>";
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Telephone number :</td><td style='border:0px !important;'> <input type='text' name='userTelNo'></td></tr>";
-	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Email :</td><td style='border:0px !important;'> <input type='text' name='userEmail'></td></tr>";
+	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Email :</td><td style='border:0px !important;'> <input type='email' name='userEmail'></td></tr>";
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Password :</td><td style='border:0px !important;'> <input type='password' name='userPassword'></td></tr>";
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*Confirm Password :</td><td style='border:0px !important;'> <input type='password' name='confirmPassword'></td></tr>";
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'></td><td style='border:0px !important;'><input type='submit' value='Sign Up'></td></tr>";
