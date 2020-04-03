@@ -6,12 +6,24 @@
 	</div>
 	<div id="navigation">
 		<ul>
-			<li><a href='index.php'>Home Tech</a></li>
-			<li><a href='aboutus.php'>About Us</a></li>
-			<li><a href='signup.php'>Sign Up</a></li>
-			<li><a href='login.php'>Login</a></li>
-			<li style='float: right'><a href='login.php'>Staff Login</a></li>
-			<li style='float: right'><a href='basket.php'>Smart Basket</a></li>
+
+			<?php
+				if(isset($_SESSION['userId'])){
+					echo "<li><a href='index.php'>Home Tech</a></li>";
+					echo "<li><a href='aboutus.php'>About Us</a></li>";
+					echo "<li><a href='logout.php'>Log Out</a></li>";
+					echo "<li style='float: right'><a href='basket.php'>Smart Basket</a></li>";
+				}else{
+					echo "<li><a href='index.php'>Home Tech</a></li>";
+					echo "<li><a href='aboutus.php'>About Us</a></li>";
+					echo "<li><a href='signup.php'>Sign Up</a></li>";
+					echo "<li><a href='login.php'>Login</a></li>";
+					echo "<li style='float: right'><a href='login.php'>Staff Login</a></li>";
+					echo "<li style='float: right'><a href='basket.php'>Smart Basket</a></li>";
+				}
+
+			?>
+
 		</ul>
 	</div>
 	<div id="content">

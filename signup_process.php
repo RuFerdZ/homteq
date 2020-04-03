@@ -34,7 +34,7 @@
 					$exeSQL=mysqli_query($conn, $SQL) or die(mysqli_error($conn));
 					echo "Hi ".$fname ." " .$sname;
 					echo "<p>You have successfully signed Up</p>";
-					echo "<p>Click here to <a href='login.pho'> Login</a> </p>";
+					echo "<p>Click here to <a href='login.php'> Login</a> </p>";
 				} catch (Exception $e) {
 					echo "Hi, this email already exists!<br>";
 					echo "<a href='signup.php'>Go back</a> to Sign up with a different email.";
