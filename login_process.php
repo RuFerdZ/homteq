@@ -59,10 +59,17 @@
 				
 
 			if ($arrayp['userEmail']==$email){
-				echo "<br>Hello ". $_SESSION['userFName']   ." ".$_SESSION['userSName']."<br>";
-				echo "<br>You have successfully logged in as homteq customer<br>";
-				echo "<br>Continue Shopping for <a href='index.php'> Home Tech</a><br>";
-				echo "<br>View your <a href='basket.php'>Smart Basket</a><br>";
+				echo "<br>Hello <b>". $_SESSION['userFName']   ." ".$_SESSION['userSName']."</b><br>";
+
+				if($arrayp['userType']=="A"){
+					$_SESSION['userType'] = "Administrator";
+					echo "<br>You have successfully logged in as Homteq " .$_SESSION['userType'];
+				}else if($arrayp['userType']=="C"){
+					$_SESSION['userType'] = "Customer";
+					echo "<br>You have successfully logged in as Homteq " .$_SESSION['userType'];
+					echo "<br><br>Go to basket <a href='basket.php'> Home Tech</a><br>";
+				}
+				echo "Continue Shopping for <a href='index.php'> Home Tech</a><br>";
 				break;
 			}
 		}

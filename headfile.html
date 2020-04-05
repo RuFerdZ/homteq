@@ -9,10 +9,20 @@
 
 			<?php
 				if(isset($_SESSION['userId'])){
-					echo "<li><a href='index.php'>Home Tech</a></li>";
-					echo "<li><a href='aboutus.php'>About Us</a></li>";
-					echo "<li><a href='logout.php'>Log Out</a></li>";
-					echo "<li style='float: right'><a href='basket.php'>Smart Basket</a></li>";
+
+					if($_SESSION['userType']=="Customer"){
+						echo "<li><a href='index.php'>Home Tech</a></li>";
+						echo "<li><a href='aboutus.php'>About Us</a></li>";
+						echo "<li><a href='logout.php'>Log Out</a></li>";
+						echo "<li style='float: right'><a href='basket.php'>Smart Basket</a></li>";
+					}else if($_SESSION['userType']=="Administrator"){
+						echo "<li><a href='index.php'>Home Tech</a></li>";
+						echo "<li><a href='addproduct.php'>Add Product</a></li>";
+						echo "<li><a href='editproduct.php'>Edit Product</a></li>";
+						echo "<li><a href='processorders.php'>Process Orders</a></li>";
+						echo "<li><a href='logout.php'>Staff LogOut</a></li>";
+					}
+					
 				}else{
 					echo "<li><a href='index.php'>Home Tech</a></li>";
 					echo "<li><a href='aboutus.php'>About Us</a></li>";
