@@ -6,7 +6,7 @@
 	echo "<body>";
 	include ("headfile.html"); //include header layout file
 	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
-	//display random text
+	
 	echo "<form action='signup_process.php' method='POST'>";
 	echo "	<table style='border:0px !important;'>";
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'>*First Name :</td><td style='border:0px !important;'> <input type='text' name='userFName'></td></tr>";
@@ -20,6 +20,7 @@
 	echo "	<tr style='border:0px !important;'><td style='border:0px !important;'></td><td style='border:0px !important;'><input type='submit' value='Sign Up'></td></tr>";
 	echo "	</table>";
 	echo "</form>";
+
 	include("footfile.html"); //include head layout
 	echo "</body>";
 ?>
