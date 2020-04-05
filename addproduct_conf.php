@@ -7,7 +7,7 @@
 	include("db.php");
 	include ("headfile.html"); //include header layout file
 	include("detectlogin.php");
-	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
+	echo "<h4>".$pagename."</h4>"; 
 	
 
 	$pname = $_POST['productName'];

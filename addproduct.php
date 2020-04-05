@@ -6,7 +6,7 @@
 	echo "<body>";
 	include ("headfile.html"); //include header layout file
 	include("detectlogin.php");
-	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
+	echo "<h4>".$pagename."</h4>"; 
 	
 
 	echo "<form action='addproduct_conf.php' method='POST'>";
