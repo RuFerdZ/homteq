@@ -9,14 +9,19 @@
 	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 	//display random text
 	 
-	echo "Thank you, ".$_SESSION['userFName']."  ".$_SESSION['userSName'];
-	echo "<br><br>You are now Logged Out";
+	if(isset($_SESSION['userFName'])){
+		echo "Thank you, ".$_SESSION['userFName']."  ".$_SESSION['userSName'];
+		echo "<br><br>You are now Logged Out";
 	
-	// remove all session variables
-	session_unset();
+		// remove all session variables
+		session_unset();
 
-	// destroy the session
-	session_destroy();
+		// destroy the session
+		session_destroy();
+
+	}else{
+		echo "You are already logged out!";
+	}
 
 
 	include("footfile.html"); //include head layout

@@ -6,6 +6,7 @@
 	echo "<title>".$pagename."</title>"; //display name of the page as window title
 	echo "<body>";
 	include ("headfile.html"); //include header layout file
+	include("detectlogin.php");
 	echo "<h4>".$pagename."</h4>"; //display name of the page on the web page
 	//display random text
 	
@@ -62,6 +63,7 @@
 				echo "<br>You have successfully logged in as homteq customer<br>";
 				echo "<br>Continue Shopping for <a href='index.php'> Home Tech</a><br>";
 				echo "<br>View your <a href='basket.php'>Smart Basket</a><br>";
+				break;
 			}
 		}
 		}else if(!$emailbool){

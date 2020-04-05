@@ -82,8 +82,10 @@
 				echo "</table>";
 				
 			}
+	$_SESSION['total'] = $total;
 		
 	if(isset($_SESSION['userId'])){
+
 		echo "<br><br>To finalize your Order: <a href='checkout.php'>Checkout</a>";	
 	}else{
 		echo "<br><br>New homteq Customers: <a href='signup.php'>Sign-up</a>";
