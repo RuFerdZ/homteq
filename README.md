@@ -10,7 +10,7 @@
 
 ## Author
 
-👤 **Rusiru Fernando (RuFerdZ))**
+👤 **Rusiru Fernando**
 
 * Website: https://rusiru.me
 * Twitter: [@RuFerdz\_LK](https://twitter.com/RuFerdz\_LK)
